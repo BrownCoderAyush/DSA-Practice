@@ -1,0 +1,24 @@
+good question to solve . we need to take care as if column index and row index dont go out of matrix in the while conditional statement . otherwise we need to
+go in the direction if else if and else statement is taking.
+Similar quesiton - search in a 2D matrix 
+
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+       int column = matrix[0].size()-1;
+        int columnLen = matrix[0].size();
+        int rowLen = matrix.size();
+        int row = 0;
+        while((0<=column && column<columnLen)&&(0<=row && row<rowLen)){
+            if(matrix[row][column]==target){
+                return true;
+            }else if(matrix[row][column]>target){                  
+                column--;
+            }else{
+                row++;
+            }
+        }
+        
+    return false;
+    }
+};
