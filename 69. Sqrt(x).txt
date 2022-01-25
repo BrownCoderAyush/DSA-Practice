@@ -1,5 +1,5 @@
 main thing to focus on this solution is to mark mid as long long int type because when we multiply int values >= 2^31 - 1 then it may overflow and to avoid this we use long long int mid
-
+*
 
 class Solution {
 public:
